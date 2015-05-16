@@ -1,0 +1,16 @@
+html,body{
+    margin:0;
+    padding: 10px;
+    background: #EFEFEF;
+}
+.section{
+    background: #fff;
+    padding: 10px 20px;
+    margin-top:10px;
+}
+.section p{
+    padding-left: 20px;
+}
+.section h3{
+    padding-left: 20px;
+}
