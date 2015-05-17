@@ -1,109 +1,216 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <meta charset="UTF-8">
     <title>CKCSS</title>
     <link rel="stylesheet" href="../css/CKCSS.css">
+    <link rel="stylesheet" href="doc.css">
+    <script src="jquery-1.11.3.min.js"></script>
 </head>
+
 <body>
     <div class="section">
         <h1>CKCSS</h1>
-        <p>CKCSS is an Object-Oriented Based CSS Framework, created by CheckZhang. </p>
+        <p>CKCSS is an Object-Oriented CSS Framework, created by CheckZhang. </p>
     </div>
 
     <div class="section">
-        <h2>How to name CSS Classes in CKCSS?</h2>
+        <h2>How to name CSS Classes in Object-Oriented CKCSS?</h2>
         <p>
-            <h3>Base Class naming:</h3>
             <p>
-                In CKCSS,  we use format "word_word" for Base CSS Class name;<br/>
-                Why choose this way? There are some naming way, like "word-word","wordWord" or "word_word", in CKCSS,have below reasons:<br/>
-                <ul>
-                    <li>"word-word": This way can differentiate single word obviously,but it's not be viewed as a single word in most IDE software,it can't be selected by double click; and more importante, it can't be searched by "\w*" in regular expression;</li>
-                    <li>"wordWord": This is better than top one, but it not obvious,compare to "word_word"</li>
-                </ul>
-            </p>
-
-
-            <h3>Child Class naming:</h3>
-            <p>In CKCSS, we use abbreviation in child class naming, for example, we used "button" for button base class, and use ".button.bt_submit" for child class - submit button; <br/>
-                Why use this way? Html tag is a language analyzed at client device by character stream, it's not a compiled language, it's character amount decide its download time directly, download time is one key factor for  user experience,so the abbreviation for parent class and has full semanteme for the child class is the best way;
+                In CKCSS,  we use format "wordWord" for Base CSS Class name,use "wd_word" for it's Child Class, use "wd-word" for this Child Dom Class,and use "WordWord" for Dom ID:<br/>
+                <!--<div class="form fm_inlineBlock" id="FormExample">
+                    <div class="fm-label">label:</div>
+                    <div class="fm-value">value</div>
+                </div>-->
+<xmp class="xmp_ckcss">
+    <div class="form fm_inlineBlock">
+        <div class="fm-label">label:</div>
+        <div class="fm-value">value</div>
+    </div>
+</xmp>
+                 Some CSS Framework just use one of there three way, CKCSS use all to make Object-Oriented more structurized and clearer;
             </p>
         </p>
-
-
     </div>
-
-
-    <div class="section">
-        <h2>How to name dom ID in CKCSS?</h2>
-        <p>
-            CKCSS use "Word_word"to name css id;(with first capital letter) <br/>
-            Why choose this way? Because this id naming is different from css class naming obviously;
-        </p>
-    </div>
-
 
     <div class="section">
         <h2>How to get Object-Oriented in CKCSS?</h2>
         <p>
-            There are two ways to achieve Object-Oriented in CSS:<br/>
-        <ul>
-            <li>
-                First way: Achieve all in css file, like this:<br/>
+        <div>
+            <span class="button">normal button</span>
+            <span class="button bt_submit">submit button</span>
+            <span class="button bt_cancle">cancle button</span>
+        </div>
+<xmp>
+    CSS file:
+    /** base class **/
+    .button{
+        background:#f6f6f6 ;
+        ...
+    }
+    /** Child class inherited from base class **/
+    .button.bt_submit{
+        background:#00a200;
+        ...
+    }
+    /** another Child class inherited from base class **/
+    .button.bt_cancle{
+        background:#2694be ;
+        ...
+    }
+
+    HTML file:
+    <div>
+        <span class="button">normal button</span>
+        <span class="button bt_submit">submit button</span>
+        <span class="button bt_cancle">cancle button</span>
+    </div>
+</xmp>
+
+        overwrite all button in a special area:<br/>
+        <div class="someArea">
+            <span class="button">normal button</span>
+            <span class="button bt_submit">submit button</span>
+            <span class="button bt_cancle">cancle button</span>
+        </div>
+
+<xmp>
+    CSS file:
+    /** overwrite base class **/
+    .someArea .button{
+        font-size:14px;
+    }
+
+    HTML file:
+    <div class="someArea">
+        <span class="button">normal button</span>
+        <span class="button bt_submit">submit button</span>
+        <span class="button bt_cancle">cancle button</span>
+    </div>
+</xmp>
+
+            There is another ways to get Class Inheriting ,but it is not recommend by CKCSS:<a href="javascript:void 0" class="more">click to see</a>
+
+        <div class="moreContent">
+                The code below not recommend in CKCSS:<br/>
                 css file:<br/>
-                .button,.button_submit,.button_cancel{<br/>
-                padding:5px 10px;<br/>
-                }<br/>
-                .button_submit{<br/>
-                background:green;<br/>
-                color:white;<br/>
-                }<br/>
-                .button_cancle{<br/>
-                background:blue;<br/>
-                color:white;<br/>
-                }<br/>
-                html file:<br/>
-                <span class="button">normal button</span><br/>
-                <span class="button_submit">submit button</span><br/>
-                <span class="button_cancle">cancle button</span>
-            </li>
-            <li>
-                Second way: Achieve it both in css and html, like this:<br/>
-                css file:<br/>
-                .button{<br/>
-                    padding:5px 10px;<br/>
-                }<br/>
-                .button.bt_submit{<br/>
-                    background:green;<br/>
-                    color:white;<br/>
-                }<br/>
-                .button.bt_cancle{<br/>
-                background:blue;<br/>
-                color:white;<br/>
-                }<br/>
-                html file:<br/>
-                <span class="button">normal button</span><br/>
-                <span class="button bt_submit">submit button</span>
-                <span class="button bt_cancle">cancle button</span>
-            </li>
-        </ul>
-        <p>
-        The first way acheive class and extention by css only, it's Css Weighted Value caculated faster than second way; But it's not the best experience for Object-Oriented, it's not extendible easily intelligibly and intuitionisticly; For example:
-        in some page, we need change all button's default view in div with class "panel",
-        in first way, we do it like this:<br/>
-        .panel .button,.panel .button_submit,.panel .button_cancel{<br/>
-        border:1px solid #EEEEEE;<br/>
-        }
-        in second way, we do it like this:<br/>
-        .panel .button{<br/>
-        border:1px solid #EEEEEE;<br/>
-        }<br/>
-        this example just two layers, in real project there are more layers,for example icon class, there are many child classes usually, it's more difficult to inherited (unless use third tools,like less,CKCSS didn't use the third tool);
-        Some one worried about the page render efficiency for this way, especially when resize the browser window. Don't worry, the browser have caculate the summing for each class before the first time render,then use the summed value repeatly;
-        </p>
-        </p>
+<xmp class="xmp_notCkcss">
+    CSS file:
+    /** Tip: below is not recommend in CKCSS **/
+    /** base class **/
+    .button,.button_submit,.button_cancel{
+        background:#f6f6f6 ;
+        ...
+    }
+    /** Child class inherited from base class **/
+    .button_submit{
+        background:#00a200;
+        ...
+    }
+    /** another Child class inherited from base class **/
+    .button_cancle{
+        background:#2694be ;
+        ...
+    }
+
+    /** overwrite base class in some area ,you need to change whole Inherited Class Tree but not by Base Class directly, it's difficute and not intuitionistic, especialy do width big tree, for example icon tree; **/
+    .someArea .button,
+    .someArea .button_submit,
+    .someArea .button_cancel{
+        font-size:14px;
+    }
+    HTML file:<br/>
+    <span class="button">normal button</span>
+    <span class="button_submit">submit button</span><br/>
+    <span class="button_cancle">cancle button</span>
+</xmp>
+
+
+
+        </div>
     </div>
 
+    <div class="section">
+        <h2>About Layout</h2>
+        <h3>Percent Layout:</h3>
+        <p>
+        CKCSS Percent Layout, allow to set any percent value from 1 to 100, it is easy and flexible;
+        <div class="percent">
+                <div class="p50 redBg">This is 50%</div>
+                <div class="p50 blueBg">This is 50%</div>
+                <div class="p37 yellowBg">This is 37%</div>
+                <div class="p63 greenBg">This is 63%</div>
+                <div class="p50 percent">
+                    <div class="p100 redBg">This is 50%</div>
+                    <div class="p38 greenBg">This is 38% relative to parent</div>
+                    <div class="p62 blueBg">This is 62% relative to parent</div>
+                </div>
+                <div class="p50 yellowBg">This<br/>is<br/>50%<br/>  </div>
+        </div>
+        <br/>
+        source code:
+<xmp>
+    <div class="percent">
+        <div class="p50 redBg">This is 50%</div>
+        <div class="p50 blueBg">This is 50%</div>
+        <div class="p37 yellowBg">This is 37%</div>
+        <div class="p63 greenBg">This is 63%</div>
+        <div class="p50 percent">
+            <div class="p100 redBg">This is 50%</div>
+            <div class="p38 greenBg">This is 38% relative to parent</div>
+            <div class="p62 blueBg">This is 62% relative to parent</div>
+        </div>
+        <div class="p50 yellowBg">This<br/>is<br/>50%<br/>  </div>
+    </div>
+</xmp>
+        </p>
+
+        <h3>InlineBlock Layout:</h3>
+        <p>
+            CKCSS InlineBlock Layout, allow to set middle inline-block row;<br/>
+            <p>
+                Example A:
+                <div class="InlineBlocks grayBg">
+                    <span>test</span>
+                    <span class="button">button</span>
+                </div>
+            </p>
+
+
+            source code:
+<xmp>
+    <div class="InlineBlocks">
+        <span>test</span>
+        <span class="button">button</span>
+    </div>
+
+</xmp>
+        <!--<p>
+            Example B:
+        <div class="InlineBlocks grayBg">
+            <b class="ib-height"></b>
+            <span>test</span>
+            <span class="button">button</span>
+        </div>
+        </p>
+
+        source code:
+<xmp>
+    <div class="InlineBlocks">
+        <span class="ib-height">&nbsp;</span>
+        <span>test</span>
+        <span class="button">button</span>
+    </div>
+
+</xmp>
+        </p>-->
+    </div>
+<script>
+    $(".more").click(function(){
+        $(".moreContent").toggle();
+    })
+</script>
 </body>
 </html>

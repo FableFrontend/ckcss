@@ -1,0 +1,29 @@
+xmp{
+    padding-left: 20px;
+    background: #EFEFEF;
+}
+xmp.xmp_notCkcss{
+    color:#CF6161;
+    border:1px solid #CF6161;
+}
+.moreContent{
+    display: none;
+}
+.someArea .button{
+    font-size:10px;
+}
+.redBg{
+    background: #CF6161;
+}
+.blueBg{
+    background: #59bad6;
+}
+.yellowBg{
+    background: #c1d661;
+}
+.greenBg{
+    background: #81ce8b;
+}
+.grayBg{
+    background: #f8f8f8;
+}
