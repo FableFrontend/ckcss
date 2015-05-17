@@ -23,7 +23,7 @@
                  Some CSS Framework just use one of there three way, CKCSS use all to make Object-Oriented more structurized and clearer;
             </p>
         </p>
-    </div>
+</div>
     
 <div class="section">
         <h2>How to get Object-Oriented in CKCSS?</h2>
@@ -72,3 +72,4 @@ overwrite all button in a special area:<br/>
 </xmp>
 
 Please go to <a href="http://www.flashpretty.com/check/ckcss/doc/index.html" target="_blank">CKCSS Offical Site</a> to get more info!
+</div>
