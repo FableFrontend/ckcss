@@ -2,7 +2,7 @@
 <div class="section">
         <h1>CKCSS</h1>
         <p>CKCSS is an Object-Oriented CSS Framework, created by CheckZhang. </p>
-		Please go to <a href="http://www.flashpretty.com/check/ckcss/doc/index.html">CKCSS Offical Site</a> to get more info!
+		Please go to <a href="http://www.flashpretty.com/check/ckcss/doc/index.html" target="_blank">CKCSS Offical Site</a> to get more info!
     </div>
 
 <div class="section">
@@ -71,4 +71,4 @@ overwrite all button in a special area:<br/>
     </div>
 </xmp>
 
-Please go to <a href="http://www.flashpretty.com/check/ckcss/doc/index.html">CKCSS Offical Site</a> to get more info!
+Please go to <a href="http://www.flashpretty.com/check/ckcss/doc/index.html" target="_blank">CKCSS Offical Site</a> to get more info!
