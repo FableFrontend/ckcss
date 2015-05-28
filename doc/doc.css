@@ -1,6 +1,20 @@
+/** section layout **/
+.section{
+    background:#fff;
+    padding:10px 20px;
+    margin-top:10px;
+}
+.section p{
+    padding-left:20px;
+}
+.section h3{
+    padding-left:20px;
+}
+
 xmp{
-    padding-left: 20px;
+    margin-left: 20px;
     background: #EFEFEF;
+    padding-bottom: 20px;
 }
 xmp.xmp_notCkcss{
     color:#CF6161;
@@ -26,4 +40,25 @@ xmp.xmp_notCkcss{
 }
 .grayBg{
     background: #f8f8f8;
+}
+
+.somePage.justifies.j_WFS>.jw-left{
+    width:200px;
+}
+.somePage.justifies.j_WFS.jw_left>.jw-content,.somePage.justifies.j_WFS.jw_both>.jw-content{
+    margin-left: 200px;
+}
+.somePage.justifies.j_WFS>.jw-right{
+    width:240px;
+}
+.somePage.justifies.j_WFS>.jw_right>.jw-content,.somePage.justifies.j_WFS.jw_both>.jw-content{
+    margin-right: 240px;
+}
+
+.inlineBlocks.ib_example>div{
+    background: #77a5ef;
+}
+
+.JVMR>div{
+    /*height: 100px;*/
 }

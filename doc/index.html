@@ -13,31 +13,87 @@
     <div class="section">
         <h1>CKCSS</h1>
         <p>CKCSS is an Object-Oriented CSS Framework, created by CheckZhang. </p>
+        <p>Current version: 1.0.0.0 <a href="../css/ckcss.css">download</a></p>
+        <p>GitHub Url:<a href="https://github.com/CheckZhang/ckcss">https://github.com/CheckZhang/ckcss</a> </p>
     </div>
 
     <div class="section">
-        <h2>How to name CSS Classes in Object-Oriented CKCSS?</h2>
+        <h2>How to name a CSS Class in Object-Oriented CKCSS?</h2>
         <p>
-            <p>
-                In CKCSS,  we use format "wordWord" for Base CSS Class name,use "wd_word" for it's Child Class, use "wd-word" for this Child Dom Class,and use "WordWord" for Dom ID:<br/>
-                <!--<div class="form fm_inlineBlock" id="FormExample">
-                    <div class="fm-label">label:</div>
-                    <div class="fm-value">value</div>
-                </div>-->
+
+                In CKCSS,  we use below naming format:<br/>
+                    <ul>
+                        <li>".wordWord":  Base Class name</li>
+                        <li>".wd_word" :  Child Class name,the letters before underline is the abbreviation of it's parent class,and it aways follow it's parent Class in css,eg:".parentClass.pc_ChildClass;"</li>
+                        <li>"wd-word" :  For the Child Dom Class
+                        <li>"WordWord": Dom ID's Css</li>
+                    </ul>
+        <div class="form">
+            <div class="fm-group j33">
+                <div class="fm-label">Label:</div>
+                <div class="fm-value">
+                    <input type="text" value="Value"/>
+                </div>
+            </div>
+            <div class="fm-group j34">
+                <div class="fm-label">Label:</div>
+                <div class="fm-value">
+                    <input type="text" value="Value"/>
+                </div>
+            </div>
+            <div class="fm-group j33">
+                <div class="fm-label">Label:</div>
+                <div class="fm-value">
+                    <input type="text" value="Value"/>
+                </div>
+            </div>
+        </div>
 <xmp class="xmp_ckcss">
-    <div class="form fm_inlineBlock">
-        <div class="fm-label">label:</div>
-        <div class="fm-value">value</div>
-    </div>
+    CSS:
+        .form{
+            display: table;
+            width:100%;
+        }
+        .form>div,.form>.fm-group>div{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .form .fm-label{
+            min-width:80px;
+            max-width: 80px;
+            text-align: right;
+        }
+        .form .fm-value{
+            width:100%;
+        }
+    HTML:
+        <div class="form">
+            <div class="fm-group j33">
+                <div class="fm-label">Label:</div>
+                <div class="fm-value">
+                    <input type="text" value="Value"/>
+                </div>
+            </div>
+            <div class="fm-group j34">
+                <div class="fm-label">Label:</div>
+                <div class="fm-value">
+                    <input type="text" value="Value"/>
+                </div>
+            </div>
+            <div class="fm-group j33">
+                <div class="fm-label">Label:</div>
+                <div class="fm-value">
+                    <input type="text" value="Value"/>
+                </div>
+            </div>
+        </div>
 </xmp>
-                 Some CSS Framework just use one of there three way, CKCSS use all to make Object-Oriented more structurized and clearer;
-            </p>
         </p>
     </div>
-
+    <!--<span>Some CSS Framework just use one of there three way, CKCSS use all to make Object-Oriented more structurized and clearer;</span>-->
     <div class="section">
         <h2>How to get Object-Oriented in CKCSS?</h2>
-        <p>
+
         <div>
             <span class="button">normal button</span>
             <span class="button bt_submit">submit button</span>
@@ -91,121 +147,306 @@
     </div>
 </xmp>
 
-            There is another ways to get Class Inheriting ,but it is not recommend by CKCSS:<a href="javascript:void 0" class="more">click to see</a>
+        There is another ways to get Class Inheriting ,but it is not recommend by CKCSS:<a href="javascript:void 0" class="more">click to see</a>
 
         <div class="moreContent">
                 The code below not recommend in CKCSS:<br/>
                 css file:<br/>
 <xmp class="xmp_notCkcss">
-    CSS file:
-    /** Tip: below is not recommend in CKCSS **/
-    /** base class **/
-    .button,.button_submit,.button_cancel{
-        background:#f6f6f6 ;
-        ...
-    }
-    /** Child class inherited from base class **/
-    .button_submit{
-        background:#00a200;
-        ...
-    }
-    /** another Child class inherited from base class **/
-    .button_cancle{
-        background:#2694be ;
-        ...
-    }
+CSS file:
+/** Tip: below is not recommend in CKCSS **/
+/** base class **/
+.button,.button_submit,.button_cancel{
+    background:#f6f6f6 ;
+    ...
+}
+/** Child class inherited from base class **/
+.button_submit{
+    background:#00a200;
+    ...
+}
+/** another Child class inherited from base class **/
+.button_cancle{
+    background:#2694be ;
+    ...
+}
 
-    /** overwrite base class in some area ,you need to change whole Inherited Class Tree but not by Base Class directly, it's difficute and not intuitionistic, especialy do width big tree, for example icon tree; **/
-    .someArea .button,
-    .someArea .button_submit,
-    .someArea .button_cancel{
-        font-size:14px;
-    }
-    HTML file:<br/>
-    <span class="button">normal button</span>
-    <span class="button_submit">submit button</span><br/>
-    <span class="button_cancle">cancle button</span>
+/** overwrite base class in some area ,you need to change whole Inherited Class Tree but not by Base Class directly, it's difficute and not intuitionistic, especialy do width big tree, for example icon tree; **/
+.someArea .button,
+.someArea .button_submit,
+.someArea .button_cancel{
+    font-size:14px;
+}
+HTML file:<br/>
+<span class="button">normal button</span>
+<span class="button_submit">submit button</span><br/>
+<span class="button_cancle">cancle button</span>
 </xmp>
 
-
-
         </div>
+
     </div>
 
     <div class="section">
-        <h2>About Layout</h2>
-        <h3>Percent Layout:</h3>
-        <p>
-        CKCSS Percent Layout, allow to set any percent value from 1 to 100, it is easy and flexible;
-        <div class="percent">
-                <div class="p50 redBg">This is 50%</div>
-                <div class="p50 blueBg">This is 50%</div>
-                <div class="p37 yellowBg">This is 37%</div>
-                <div class="p63 greenBg">This is 63%</div>
-                <div class="p50 percent">
-                    <div class="p100 redBg">This is 50%</div>
-                    <div class="p38 greenBg">This is 38% relative to parent</div>
-                    <div class="p62 blueBg">This is 62% relative to parent</div>
-                </div>
-                <div class="p50 yellowBg">This<br/>is<br/>50%<br/>  </div>
+        <h2>CKCSS Layout</h2>
+        <h3>1) Justifying Layout:</h3>
+        CKCSS Justifying Layout, allow to set any percent value from 1 to 100, it is easy and flexible;
+        <div class="justifies centers mt5 mts5">
+            <div class="j50 redBg">2Column(j50)</div>
+            <div class="j50 blueBg">2Column(j50)</div>
+
+            <div class="j33 yellowBg">3Column(j33)</div>
+            <div class="j34 greenBg">3Column(j34)</div>
+            <div class="j33 yellowBg">3Column(j33)</div>
+
+            <div class="j25 redBg">4Column(j25)</div>
+            <div class="j25 blueBg">4Column(j25)</div>
+            <div class="j25 redBg">4Column(j25)</div>
+            <div class="j25 blueBg">4Column(j25)</div>
+
+            <div class="j20 yellowBg">5Column(j20)</div>
+            <div class="j20 greenBg">5Column(j20)</div>
+            <div class="j20 yellowBg">5Column(j20)</div>
+            <div class="j20 greenBg">5Column(j20)</div>
+            <div class="j20 yellowBg">5Column(j20)</div>
+
+            <div class="j37 redBg">This is 37%</div>
+            <div class="j63 blueBg">This is 63%</div>
+            <div class="j50 justifies">
+                <div class="j100 yellowBg">This is 50%</div>
+                <div class="j38 greenBg">This is 38% relative to parent</div>
+                <div class="j62 blueBg">This is 62% relative to parent</div>
+            </div>
+            <div class="j50 greenBg">This<br/>is<br/>50%<br/></div>
         </div>
         <br/>
         source code:
 <xmp>
-    <div class="percent">
-        <div class="p50 redBg">This is 50%</div>
-        <div class="p50 blueBg">This is 50%</div>
-        <div class="p37 yellowBg">This is 37%</div>
-        <div class="p63 greenBg">This is 63%</div>
-        <div class="p50 percent">
-            <div class="p100 redBg">This is 50%</div>
-            <div class="p38 greenBg">This is 38% relative to parent</div>
-            <div class="p62 blueBg">This is 62% relative to parent</div>
+    <div class="justifies centers mts5">
+        <div class="j50 redBg">2Column(j50)</div>
+        <div class="j50 blueBg">2Column(j50)</div>
+
+        <div class="j33 yellowBg">3Column(j33)</div>
+        <div class="j34 greenBg">3Column(j34)</div>
+        <div class="j33 yellowBg">3Column(j33)</div>
+
+        <div class="j25 redBg">4Column(j25)</div>
+        <div class="j25 blueBg">4Column(j25)</div>
+        <div class="j25 redBg">4Column(j25)</div>
+        <div class="j25 blueBg">4Column(j25)</div>
+
+        <div class="j20 yellowBg">5Column(j20)</div>
+        <div class="j20 greenBg">5Column(j20)</div>
+        <div class="j20 yellowBg">5Column(j20)</div>
+        <div class="j20 greenBg">5Column(j20)</div>
+        <div class="j20 yellowBg">5Column(j20)</div>
+
+        <div class="j37 redBg">This is 37%</div>
+        <div class="j63 blueBg">This is 63%</div>
+        <div class="j50 justifies">
+            <div class="j100 yellowBg">This is 50%</div>
+            <div class="j38 greenBg">This is 38% relative to parent</div>
+            <div class="j62 blueBg">This is 62% relative to parent</div>
         </div>
-        <div class="p50 yellowBg">This<br/>is<br/>50%<br/>  </div>
+        <div class="j50 greenBg">This<br/>is<br/>50%<br/></div>
     </div>
 </xmp>
-        </p>
-
-        <h3>InlineBlock Layout:</h3>
-        <p>
-            CKCSS InlineBlock Layout, allow to set middle inline-block row;<br/>
-            <p>
-                Example A:
-                <div class="InlineBlocks grayBg">
-                    <span>test</span>
-                    <span class="button">button</span>
-                </div>
-            </p>
 
 
+        <h3>2) Justifying Layout With Fixed Slide:</h3>
+        <div class="mts5">
+            to use justifying layout with fixed slide;
+            <div class="justifies jf_WFS jw_left centers">
+                <div class="jw-left redBg">150px(j-left)</div>
+                <div class="jw-content blueBg">Justified content(jw-content)</div>
+            </div>
+            <div class="justifies jf_WFS jw_right centers">
+                <div class="jw-right redBg">150px(j-right)</div>
+                <div class="jw-content blueBg">Justified content(jw-content)</div>
+            </div>
+            <div class="justifies jf_WFS jw_both centers">
+                <div class="jw-right redBg">150px(j-right)</div>
+                <div class="jw-left redBg">150px(j-left)</div>
+                <div class="jw-content blueBg">Justified content(jw-content)</div>
+            </div>
+            <br/>
             source code:
 <xmp>
-    <div class="InlineBlocks">
-        <span>test</span>
-        <span class="button">button</span>
+    <div class="justifies jf_WFS jw_left centers">
+        <div class="jw-left redBg">150px(j-left)</div>
+        <div class="jw-content blueBg">Justified content(jw-content)</div>
     </div>
+    <div class="justifies jf_WFS jw_right centers">
+        <div class="jw-right redBg">150px(j-right)</div>
+        <div class="jw-content blueBg">Justified content(jw-content)</div>
+    </div>
+    <div class="justifies jf_WFS jw_both centers">
+        <div class="jw-right redBg">150px(j-right)</div>
+        <div class="jw-left redBg">150px(j-left)</div>
+        <div class="jw-content blueBg">Justified content(jw-content)</div>
+    </div>
+</xmp>
+            Most time, you need to overwrite the width value of slide in your page:
+            <div class="justifies jf_WFS jw_both centers somePage">
+                <div class="jw-right redBg">240px(j-right)</div>
+                <div class="jw-left redBg">200px(j-left)</div>
+                <div class="jw-content blueBg">Justified content(jw-content)</div>
+            </div>
+<xmp>
+    CSS:
+        .somePage.justifies.jf_WFS>.jw-left{
+            width:200px;
+        }
+        .somePage.justifies.jf_WFS.jw_left>.jw-content,.somePage.justifies.jf_WFS.jw_both>.jw-content{
+            margin-left: 200px;
+        }
+        .somePage.justifies.jf_WFS>.jw-right{
+            width:240px;
+        }
+        .somePage.justifies.jf_WFS>.jw_right>.jw-content,.somePage.justifies.jf_WFS.jw_both>.jw-content{
+            margin-right: 240px;
+        }
+    HTML:
+        <div class="justifies jf_WFS jw_both centers somePage">
+            <div class="jw-right redBg">240px(j-right)</div>
+            <div class="jw-left redBg">200px(j-left)</div>
+            <div class="jw-content blueBg">Justified content(jw-content)</div>
+        </div>
+</xmp>
+        </div>
+
+        <h3>4) Vertical Middle Row(VMR)(inlineBlocks):</h3>
+        <p>
+            CKCSS VMR give middle row layout by CSS Class 'inlineBlocks' :
+            <div class="inlineBlocks blueBg">
+                <div>item0</div>
+                <div>item1<br/>item1_2</div>
+                <div>item2</div>
+                <div>item3</div>
+                <div>item4</div>
+            </div>
+            Inline block is one type of block,so in CKCSS, inline block is aways use 'div' tag at anywhere,
+        </p>
+<xmp>
+    <div class="inlineBlocks blueBg">
+        <div>item0</div>
+        <div>item1<br/>item1_2</div>
+        <div>item2</div>
+        <div>item3</div>
+        <div>item4</div>
+    </div>
+</xmp>
+        <h3>5) CKCSS Justifyed Vertical Middle Row(JVMR):</h3>
+        <p>
+            JVMR children without background area (justifies & inlineBlocks):
+            <div class="justifies inlineBlocks centers yellowBg">
+                <div class="j20">item0</div><div class="j20">item1<br/>item1_2</div><div class="j20">item2</div><div class="j20">item3</div><div class="j20">item4</div>
+            </div>
+        </p>
+<xmp>
+    <div class="justifies inlineBlocks centers yellowBg">
+        <div class="j20">item0</div><div class="j20">item1<br/>item1_2</div><div class="j20">item2</div><div class="j20">item3</div<div class="j20">item4</div>
+    </div>
+    Warning: can't use breakline before inlineBlocks's child div,otherwise it will be add 10px space by browser;
 
 </xmp>
-        <!--<p>
-            Example B:
-        <div class="InlineBlocks grayBg">
-            <b class="ib-height"></b>
-            <span>test</span>
-            <span class="button">button</span>
-        </div>
+        <p>
+            JVMR children has background area(justifies & middles):
+            <div class="justifies middles centers yellowBg">
+                <div class="j20 blueBg">item0</div>
+                <div class="j20 greenBg">item1<br/>item1_2</div>
+                <div class="j20 yellowBg">item2</div>
+                <div class="j20 redBg">item3</div>
+                <div class="j20 blueBg">item4</div>
+            </div>
+            Code:
+<xmp>
+    <div class="justifies middles centers yellowBg">
+        <div class="j20 blueBg">item0</div>
+        <div class="j20 greenBg">item1<br/>item1_2</div>
+        <div class="j20 yellowBg">item2</div>
+        <div class="j20 redBg">item3</div>
+        <div class="j20 blueBg">item4</div>
+    </div>
+</xmp>
         </p>
 
-        source code:
+        <h3>6) Form Layout </h3>
+        <p>
+            Form Layout css is same as JVMR with children has background area:
+            <div class="form">
+                <div class="fm-group j33">
+                    <div class="fm-label">Label:</div>
+                    <div class="fm-value">
+                        <input type="text" value="Value"/>
+                    </div>
+                </div>
+                <div class="fm-group j34">
+                    <div class="fm-label">Label:</div>
+                    <div class="fm-value">
+                        <input type="text" value="Value"/>
+                    </div>
+                </div>
+                <div class="fm-group j33">
+                    <div class="fm-label">Label:</div>
+                    <div class="fm-value">
+                        <input type="text" value="Value"/>
+                    </div>
+                </div>
+            </div>
 <xmp>
-    <div class="InlineBlocks">
-        <span class="ib-height">&nbsp;</span>
-        <span>test</span>
-        <span class="button">button</span>
+    <div class="form">
+        <div class="fm-group j33">
+            <div class="fm-label">Label:</div>
+            <div class="fm-value">
+                <input type="text" value="Value"/>
+            </div>
+        </div>
+        <div class="fm-group j34">
+            <div class="fm-label">Label:</div>
+            <div class="fm-value">
+                <input type="text" value="Value"/>
+            </div>
+        </div>
+        <div class="fm-group j33">
+            <div class="fm-label">Label:</div>
+            <div class="fm-value">
+                <input type="text" value="Value"/>
+            </div>
+        </div>
+    </div>
+</xmp>
+        </p>
+
     </div>
 
+    <div class="section">
+        <h2>CKCSS Base Controls:</h2>
+        <p>
+            CKCSS give some base controls,eg:button,link,popupWindow, you can get more controls from <a href="https://github.com/CheckZhang/ckjs">CKJS</a> :
+        </p>
+        <h3>1) Button </h3>
+        <div>
+            <span class="button">normal button</span>
+            <span class="button bt_submit">submit button</span>
+            <span class="button bt_cancle">cancle button</span>
+        </div>
+<xmp>
+    <div>
+        <span class="button">normal button</span>
+        <span class="button bt_submit">submit button</span>
+        <span class="button bt_cancle">cancle button</span>
+    </div>
 </xmp>
-        </p>-->
+        <h3>2) Text Input </h3>
+        <div>
+            waitting next version...
+        </div>
+
+        <h3>2) Area Input </h3>
+        <div>
+            waitting next version...
+        </div>
     </div>
 <script>
     $(".more").click(function(){
