@@ -3,69 +3,106 @@ html,body{
     padding:10px;
     background:#EFEFEF;
 }
+
+
 div{
     box-sizing:border-box;
 }
 
-/** percent layout **/
-.justifies{
-    position:relative;
-    overflow:hidden;
-    padding:0;
+/** alignment **/
+.lefts{
+    text-align: left;
 }
-.justifies:after{
-    clear:left;
+.rights{
+    text-align: right;
 }
-
-.justifies>div{
-    float:left;
-    padding:10px;
+.centers{
+    text-align: center;
 }
-.justifies .justifies{
-    padding:0;
+.top,.tops>div{
+    display: inline-block;
+    vertical-align: top;
+    zoom:1;
 }
-.justifies.jf_WFS>div{
-    float:none;
+.middle,.middles>div{
+    display: inline-block;
+    vertical-align: middle;
+    zoom:1;
 }
-.justifies.jf_WFS>.jw-left{
-    width:150px;
-    float:left;
-}
-.justifies.jf_WFS.jw_left>.jw-content,.justifies.jf_WFS.jw_both>.jw-content{
-    margin-left:150px;
-}
-.justifies.jf_WFS>.jw-right{
-    width:150px;
-    float:right;
-}
-.justifies.jf_WFS.jw_right>.jw-content,.justifies.jf_WFS.jw_both>.jw-content{
-    margin-right:150px;
+.bottom,.bottoms>div{
+    display: inline-block;
+    vertical-align: bottom;
+    zoom:1;
 }
 
-
-/** row layout **/
-.inlineBlocks .ib-height{
-    height:40px;
-    background:#fff;
-    width:1px;
-    overflow:hidden;
+.middles:before,.tops:before,.bottoms:before{
+    height:100%;
+    display: inline-block;
+    content:"&nbsp";
+    width:0px;
+    overflow: hidden;
+    margin-left: -8px;
+    margin-left: -4px\9;
+    zoom: 1;
+    background: none;
 }
-.inlineBlocks>div{
-    display:inline-block;
+.middles:before{
     vertical-align: middle;
 }
+.tops:before{
+    vertical-align: top;
+}
+.bottoms:before{
+    vertical-align: bottom;
+}
 
-/** mix row and justify **/
-.justifies.inlineBlocks>div{
-    float: none;
+
+/** floats **/
+.float.fl_left,.floats.fl_left>div{
+    float:left;
 }
-.justifies.middles{
-    display: table;
+.float.fl_right,.floats.fl_right>div{
+    float:right;
+}
+
+/** percent layout **/
+div.justifies{
     width:100%;
+    display: table;
 }
-.justifies.middles>div{
-    float:none;
+
+div.justifies>div{
+    display: table-cell;
 }
+div.justifies div.justifies{
+    padding:0;
+}
+
+div.justifies>.jf-fixed{
+    width:150px;
+}
+
+.justifies>.tops,.justifies.tops{
+    vertical-align: top;
+}
+.justifies>.middles,.justifies.middles{
+    vertical-align: middle;
+}
+.justifies>.bottoms,.justifies.bottoms{
+    vertical-align: bottom;
+}
+.justifies>.tops>div,.justifies>.middles>div,.justifies>.bottoms>div{
+    display: block;
+}
+.justifies>.tops:before,.justifies>.middles:before,.justifies>.bottoms:before{
+    display: none;
+    height: 0;
+    margin-left: 0;
+}
+.justifies.jf_middles>div,.justifies .jf-middle{
+
+}
+
 
 /** form layout **/
 .form{
@@ -121,24 +158,6 @@ div{
 }
 .button .bt_likeA:hover{
     color:#77a5ef;
-}
-
-.mts5>div{
-    margin-top:5px;
-}
-
-
-
-.centers>div,.centers>span{
-    text-align: center;
-}
-.middles{
-    position: relative;
-}
-.middles>div{
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
 }
 
 /** global percent values **/

@@ -1,18 +1,80 @@
+body{
+    line-height:24px;
+}
+span{
+    padding:0 5px;
+}
 /** section layout **/
 .section{
     background:#fff;
     padding:10px 20px;
     margin-top:10px;
 }
+.section .sc-title{
+
+}
+.section .sc-content{
+    margin-left:25px;
+}
+
 .section p{
     padding-left:20px;
 }
-.section h3{
-    padding-left:20px;
+
+.example{
+
+}
+.example>div{
+    color:#fff;
+    font-weight: bold;
+}
+.fixedAreaH,.fixedAreaHs>div{
+    width:200px;
+}
+.fixedAreaV,.fixedAreaVs>div{
+    height:100px;
 }
 
+.fixedArea,.fixedAreas>div{
+    height: 100px;
+    width:200px;
+}
+
+.mts{
+    margin-top:-5px;
+}
+.mt,.mts>div{
+    margin-top:5px;
+}
+.mls{
+    margin-left: -5px;
+}
+.ml,.mls>div{
+    margin-left: 5px;
+}
+.pds>div{
+    padding:10px;
+}
+
+/*.vDiv.ml:after,.mls>.vDiv:after,.vDivs.mls>div:after{
+    content: " ";
+    display: table-cell;
+    width:5px;
+    height: 100px;
+    background: #CF6161;
+    vertical-align: top;
+}*/
+.vDivs.mls>div{
+    zoom: 1;
+}
+
+.floats.fl_left{
+    margin-left:-5px;
+}
+.floats.fl_left.fl_5>div{
+    margin-left:5px;
+}
 xmp{
-    margin-left: 20px;
     background: #EFEFEF;
     padding-bottom: 20px;
 }
@@ -29,7 +91,7 @@ xmp.xmp_notCkcss{
 .redBg{
     background: #CF6161;
 }
-.blueBg{
+.blueBg,.blueBgs>div{
     background: #59bad6;
 }
 .yellowBg{
@@ -39,20 +101,15 @@ xmp.xmp_notCkcss{
     background: #81ce8b;
 }
 .grayBg{
-    background: #f8f8f8;
+    background: #AAAAAA;
 }
 
-.somePage.justifies.j_WFS>.jw-left{
+.somePage.justifies>.jf-left{
     width:200px;
 }
-.somePage.justifies.j_WFS.jw_left>.jw-content,.somePage.justifies.j_WFS.jw_both>.jw-content{
-    margin-left: 200px;
-}
-.somePage.justifies.j_WFS>.jw-right{
+
+.somePage.justifies>.jf-right{
     width:240px;
-}
-.somePage.justifies.j_WFS>.jw_right>.jw-content,.somePage.justifies.j_WFS.jw_both>.jw-content{
-    margin-right: 240px;
 }
 
 .inlineBlocks.ib_example>div{
