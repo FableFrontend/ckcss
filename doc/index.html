@@ -13,8 +13,8 @@
     <div class="section">
         <h1>CKCSS</h1>
         <p>CKCSS is an Object-Oriented CSS Framework, created by CheckZhang. </p>
-        <p>Current version: 1.0.0.0 <a href="../css/ckcss.css">download</a></p>
-        <p>GitHub Url:<a href="https://github.com/CheckZhang/ckcss">https://github.com/CheckZhang/ckcss</a> </p>
+        <p>Support browser:IE8+ Chrome Firfox ...,CSS:3.0+, Current version: 1.0.0.0 <a href="../css/ckcss.css">download css from here</a></p>
+        <p>Download All From GitHub:<a href="https://github.com/CheckZhang/ckcss">https://github.com/CheckZhang/ckcss</a> </p>
     </div>
 
     <div class="section">
@@ -123,32 +123,35 @@
                     <span class="button bt_cancle">cancle button</span>
                 </div>
             </xmp>
+            overwrite all button in a special area:<br/>
+            <div class="someArea">
+                <span class="button">normal button</span>
+                <span class="button bt_submit">submit button</span>
+                <span class="button bt_cancle">cancle button</span>
+            </div>
+            <xmp>
+                CSS file:
+                /** overwrite base class **/
+                .someArea .button{
+                    font-size:14px;
+                }
+
+                HTML file:
+                <div class="someArea">
+                    <span class="button">normal button</span>
+                    <span class="button bt_submit">submit button</span>
+                    <span class="button bt_cancle">cancle button</span>
+                </div>
+            </xmp>
+            There is another ways to get Class Inheriting ,but it is not recommend by CKCSS:<a href="javascript:void 0" class="more">click to see</a>
         </div>
 
 
-        overwrite all button in a special area:<br/>
-        <div class="someArea">
-            <span class="button">normal button</span>
-            <span class="button bt_submit">submit button</span>
-            <span class="button bt_cancle">cancle button</span>
-        </div>
 
-<xmp>
-    CSS file:
-    /** overwrite base class **/
-    .someArea .button{
-        font-size:14px;
-    }
 
-    HTML file:
-    <div class="someArea">
-        <span class="button">normal button</span>
-        <span class="button bt_submit">submit button</span>
-        <span class="button bt_cancle">cancle button</span>
-    </div>
-</xmp>
 
-        There is another ways to get Class Inheriting ,but it is not recommend by CKCSS:<a href="javascript:void 0" class="more">click to see</a>
+
+
 
         <div class="moreContent">
                 The code below not recommend in CKCSS:<br/>
