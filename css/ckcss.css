@@ -10,13 +10,13 @@ div{
 }
 
 /** alignment **/
-.lefts{
+.left,.lefts{
     text-align: left;
 }
-.rights{
+.right,.rights{
     text-align: right;
 }
-.centers{
+.center,.centers{
     text-align: center;
 }
 .top,.tops>div{
@@ -66,20 +66,21 @@ div{
 }
 
 /** percent layout **/
-div.justifies{
+.justifies{
     width:100%;
     display: table;
 }
 
-div.justifies>div{
+.justifies>div,div.justifies.middles>div{
     display: table-cell;
 }
-div.justifies div.justifies{
+.justifies .justifies{
     padding:0;
 }
 
-div.justifies>.jf-fixed{
+.justifies>.jf-fixed{
     width:150px;
+    min-width: 150px;
 }
 
 .justifies>.tops,.justifies.tops{
@@ -99,9 +100,7 @@ div.justifies>.jf-fixed{
     height: 0;
     margin-left: 0;
 }
-.justifies.jf_middles>div,.justifies .jf-middle{
 
-}
 
 
 /** form layout **/
@@ -114,8 +113,7 @@ div.justifies>.jf-fixed{
     vertical-align: middle;
 }
 .form .fm-label{
-    min-width:80px;
-    max-width: 80px;
+    min-width:150px;
     text-align: right;
 }
 .form .fm-value{
