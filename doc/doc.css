@@ -37,18 +37,6 @@ span{
     width:200px;
 }
 
-.mts{
-    margin-top:-5px;
-}
-.mt,.mts>div{
-    margin-top:5px;
-}
-.mls{
-    margin-left: -5px;
-}
-.ml,.mls>div{
-    margin-left: 5px;
-}
 .pds>div{
     padding:10px;
 }

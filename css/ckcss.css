@@ -4,7 +4,6 @@ html,body{
     background:#EFEFEF;
 }
 
-
 div{
     box-sizing:border-box;
 }
@@ -101,8 +100,6 @@ div{
     margin-left: 0;
 }
 
-
-
 /** form layout **/
 .form{
     display: table;
@@ -170,3 +167,6 @@ div{
 .clearFix {
     zoom: 1;
 }
+
+/** margin **/
+.mtSmall,.mtSmalls>div{margin-top:5px;}.mtSmalls>div:first-child{ margin-top:0;}.mlSmall,.mlSmalls>div{margin-left: 5px;}.mlSmalls>div:first-child{margin-left: 0;}.mt,.mts>div{margin-top:5px;}.mts>div:first-child{margin-top:0;}  .ml,.mls>div{margin-left: 10px;}.mls>div:first-child{margin-left: 0;}.mtLarge,.mtLarges>div{margin-top:20px;}.mtLarges>div:first-child{    margin-top:0;}.mlLarge,.mlLarges>div{margin-left: 20px;}.mlLarges>div:first-child{margin-left: 0;}
