@@ -94,10 +94,11 @@ div{
 .justifies>.tops>div,.justifies>.middles>div,.justifies>.bottoms>div{
     display: block;
 }
-.justifies>.tops:before,.justifies>.middles:before,.justifies>.bottoms:before{
+.justifies>.tops:before,.justifies.tops:before,.justifies>.middles:before,.justifies.middles:before,.justifies>.bottoms:before,.justifies.bottoms:before{
     display: none;
     height: 0;
     margin-left: 0;
+    content: "";
 }
 
 /** form layout **/
