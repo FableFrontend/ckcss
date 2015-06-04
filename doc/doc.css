@@ -61,6 +61,8 @@ span{
 }
 xmp{
     background: #EFEFEF;
+    width:100%;
+    overflow-x: scroll;
 }
 xmp.xmp_notCkcss{
     color:#CF6161;

@@ -190,7 +190,7 @@ HTML file:<br/>
             <h3>1) Horizontal Alignment</h3>
             <div class="sc-content">
                 Horizontal align in a Fixed Area:
-                <div class="example fixedAreas blueBgs middles clearFix mls">
+                <div class="example fixedAreas blueBgs inlineMiddles spaceHs">
                     <div class="lefts">
                         left:<br/>
                         <span class="yellowBg">span</span>
@@ -206,7 +206,7 @@ HTML file:<br/>
                     </div>
                 </div>
                 <xmp>
-                    <div class="example fixedAreas blueBgs middles clearFix mls">
+                    <div class="example fixedAreas blueBgs middles spaceHs">
                         <div class="lefts">
                             left:<br/>
                             <span class="yellowBg">span</span>
@@ -226,94 +226,132 @@ HTML file:<br/>
 
             <div class="sc-content">
                 Horizontal align in Justify Layout:
-                <div class="example mts">
-                    <div class="justifies">
-                        <div class="j33 greenBg lefts">
-                            <span>left</span>
-                            <span class="yellowBg">span</span>
-                            <div class="yellowBg">div</div>
-                        </div><div class="j34 yellowBg centers">
-                        <span>center</span>
-                            <span class="greenBg">span</span>
-                            <div class="greenBg">div</div>
-                        </div><div class="j33 redBg rights">
-                            <span>right</span>
-                            <span class="yellowBg">span</span>
-                            <div class="grayBg">div</div>
-                        </div>
-                    </div>
-                    <xmp>
-                        <div class="justifies">
-                            <div class="j33 greenBg lefts">
+                <div class="example">
+                    <div class="justifies spaceHs">
+                        <div class="h33 lefts">
+                            <div class="greenBg">
                                 <span>left</span>
                                 <span class="yellowBg">span</span>
                                 <div class="yellowBg">div</div>
-                            </div><div class="j34 yellowBg centers">
+                            </div>
+                        </div>
+                        <div class="h34 centers">
+                            <div class="blueBg">
                                 <span>center</span>
                                 <span class="greenBg">span</span>
                                 <div class="greenBg">div</div>
-                            </div><div class="j33 redBg rights">
-                                <span>right</span>
-                                <span class="yellowBg">span</span>
-                                <div class="grayBg">div</div>
                             </div>
                         </div>
-                    </xmp>
-                    <div class="justifies centers">
-                        <div class="j33 greenBg">
-                            <span>center</span>
-                            <span class="yellowBg">span</span>
-                            <div class="yellowBg">div</div>
-                        </div><div class="j34 yellowBg">
-                            <span>center</span>
-                            <span class="greenBg">span</span>
-                            <div class="grayBg">div</div>
-                        </div><div class="j33 greenBg">
-                            <span>center</span>
-                            <span class="redBg">span</span>
-                            <div class="redBg">div</div>
+                        <div class="h33 rights">
+                            <div class="grayBg">
+                                <span>right</span>
+                                <span class="yellowBg">span</span>
+                                <div class="redBg">div</div>
+                            </div>
                         </div>
                     </div>
-                    <xmp>
-                        <div class="justifies centers">
-                            <div class="j33 greenBg">
+                </div>
+                <xmp>
+                    <div class="example">
+                        <div class="justifies spaceHs">
+                            <div class="h33 lefts">
+                                <div class="greenBg">
+                                    <span>left</span>
+                                    <span class="yellowBg">span</span>
+                                    <div class="yellowBg">div</div>
+                                </div>
+                            </div>
+                            <div class="h34 centers">
+                                <div class="blueBg">
+                                    <span>center</span>
+                                    <span class="greenBg">span</span>
+                                    <div class="greenBg">div</div>
+                                </div>
+                            </div>
+                            <div class="h33 rights">
+                                <div class="grayBg">
+                                    <span>right</span>
+                                    <span class="yellowBg">span</span>
+                                    <div class="redBg">div</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xmp>
+
+                Align all at one place:
+                <div class="example">
+                    <div class="justifies centers spaceHs">
+                        <div class="h33">
+                            <div class="greenBg">
                                 <span>center</span>
                                 <span class="yellowBg">span</span>
                                 <div class="yellowBg">div</div>
-                            </div><div class="j34 yellowBg">
+                            </div>
+                        </div>
+                        <div class="h34">
+                            <div class="blueBg">
                                 <span>center</span>
                                 <span class="greenBg">span</span>
                                 <div class="greenBg">div</div>
-                            </div><div class="j33 greenBg">
+                            </div>
+                        </div>
+                        <div class="h33">
+                            <div class="grayBg">
                                 <span>center</span>
                                 <span class="redBg">span</span>
                                 <div class="redBg">div</div>
                             </div>
                         </div>
-                    </xmp>
-
+                    </div>
                 </div>
-
+                <xmp>
+                    <div class="example">
+                        <div class="justifies centers spaceHs">
+                            <div class="h33">
+                                <div class="greenBg">
+                                    <span>center</span>
+                                    <span class="yellowBg">span</span>
+                                    <div class="yellowBg">div</div>
+                                </div>
+                            </div>
+                            <div class="h34">
+                                <div class="blueBg">
+                                    <span>center</span>
+                                    <span class="greenBg">span</span>
+                                    <div class="greenBg">div</div>
+                                </div>
+                            </div>
+                            <div class="h33">
+                                <div class="grayBg">
+                                    <span>center</span>
+                                    <span class="redBg">span</span>
+                                    <div class="redBg">div</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xmp>
             </div>
 
             <h3>2) Vertical Alignment</h3>
             <div class="sc-content">
                 Vertical align in Fixed Area:
-                <div class="example fixedAreas middles mls">
-                    <div class="tops centers blueBg">
-                        <div class="j100">
+                <div class="example inlineMiddles spaceHs">
+                    <div class="fixedArea centers inlineTops blueBg">
+                        <div class="h100 vAuto">
                             <span>top</span>
                             <span class="greenBg">span</span>
                             <div class="redBg">div</div>
                         </div>
-                    </div><div class=" middles centers yellowBg">
-                        <div class="j100">
+                    </div><div class="fixedArea centers inlineMiddles yellowBg">
+                        <div class="h100 vAuto">
                             <span>middle</span>
                             <span class="greenBg">span</span>
                             <div class="redBg">div</div>
                         </div>
-                    </div><div class="bottoms centers greenBg">
-                        <div class="j100">
+                    </div><div class="fixedArea centers inlineBottoms grayBg">
+                        <div class="h100 vAuto">
                             <span>bottom</span>
                             <span class="blueBg">span</span>
                             <div class="redBg">div</div>
@@ -321,21 +359,21 @@ HTML file:<br/>
                     </div>
                 </div>
                 <xmp>
-                    <div class="example fixedAreas middles mls">
-                        <div class="tops centers blueBg">
-                            <div class="j100">
+                    <div class="example inlineMiddles spaceHs">
+                        <div class="fixedArea centers inlineTops blueBg">
+                            <div class="h100 vAuto">
                                 <span>top</span>
                                 <span class="greenBg">span</span>
                                 <div class="redBg">div</div>
                             </div>
-                        </div><div class=" middles centers yellowBg">
-                            <div class="j100">
+                        </div><div class="fixedArea centers inlineMiddles yellowBg">
+                            <div class="h100 vAuto">
                                 <span>middle</span>
                                 <span class="greenBg">span</span>
                                 <div class="redBg">div</div>
                             </div>
-                        </div><div class="bottoms centers greenBg">
-                            <div class="j100">
+                        </div><div class="fixedArea centers inlineBottoms grayBg">
+                            <div class="h100 vAuto">
                                 <span>bottom</span>
                                 <span class="blueBg">span</span>
                                 <div class="redBg">div</div>
@@ -347,73 +385,47 @@ HTML file:<br/>
 
             <div class="sc-content">
                 Vertical align in Justify Layout:<br/>
-                <div class="example fixedAreaV justifies centers mls">
-                    <div class="tops blueBg j33">
-                        <span class="greenBg">top</span>
-                        <span class="yellowBg">span</span>
+                <div class="example fixedAreaV justifies centers spaceHs">
+                    <div class="h33 v100 top">
+                        <div class="jf-bg blueBg"></div>
+                        <span>top</span>
+                        <span class="greenBg">span</span>
                         <div class="redBg">div</div>
-                    </div><div class=" middles yellowBg j34">
-                        <span class="greenBg">middle</span>
-                        <span class="yellowBg">span</span>
+                    </div><div class="h34 v100 middle">
+                        <div class="jf-bg yellowBg"></div>
+                        <span>middle</span>
+                        <span class="greenBg">span</span>
                         <div class="redBg">div</div>
-                    </div><div class=" bottoms greenBg j33">
-                        <span class="greenBg">bottom</span>
-                        <span class="yellowBg">span</span>
+                    </div><div class="h33 v100 bottom">
+                        <div class="jf-bg grayBg"></div>
+                        <span>bottom</span>
+                        <span class="blueBg">span</span>
                         <div class="redBg">div</div>
                     </div>
                 </div>
                 <xmp>
-                    <div class="example fixedAreaV justifies centers mls">
-                        <div class="tops blueBg j33">
-                            <span class="greenBg">top</span>
-                            <span class="yellowBg">span</span>
+                    <div class="example fixedAreaV justifies centers spaceHs">
+                        <div class="h33 v100 top">
+                            <div class="jf-bg blueBg"></div>
+                            <span>top</span>
+                            <span class="greenBg">span</span>
                             <div class="redBg">div</div>
-                        </div><div class=" middles yellowBg j34">
-                            <span class="greenBg">middle</span>
-                            <span class="yellowBg">span</span>
+                        </div><div class="h34 v100 middle">
+                            <div class="jf-bg yellowBg"></div>
+                            <span>middle</span>
+                            <span class="greenBg">span</span>
                             <div class="redBg">div</div>
-                        </div><div class=" bottoms greenBg j33">
-                            <span class="greenBg">bottom</span>
-                            <span class="yellowBg">span</span>
+                        </div><div class="h33 v100 bottom">
+                            <div class="jf-bg grayBg"></div>
+                            <span>bottom</span>
+                            <span class="blueBg">span</span>
                             <div class="redBg">div</div>
                         </div>
                     </div>
                 </xmp>
-                <div class="example fixedAreaV justifies middles centers mls">
-                    <div class="blueBg j33">
-                        <span>middle</span>
-                        <span class="yellowBg">span</span>
-                        <div class="redBg">div</div>
-                    </div><div class="yellowBg j34">
-                        <span>middle</span>
-                        <span class="yellowBg">span</span>
-                        <div class="grayBg">div</div>
-                    </div><div class="greenBg j33">
-                        <span>middle</span>
-                        <span class="yellowBg">span</span>
-                        <div class="redBg">div</div>
-                    </div>
-                </div>
-                <xmp>
-                    <div class="example fixedAreaV justifies middles centers mls">
-                        <div class="blueBg j33">
-                            <span>middle</span>
-                            <span class="yellowBg">span</span>
-                            <div class="redBg">div</div>
-                        </div><div class="yellowBg j34">
-                            <span>middle</span>
-                            <span class="yellowBg">span</span>
-                            <div class="grayBg">div</div>
-                        </div><div class="greenBg j33">
-                            <span>middle</span>
-                            <span class="yellowBg">span</span>
-                            <div class="redBg">div</div>
-                        </div>
-                    </div>
-                </xmp>
+
             </div>
         </div>
-
     </div>
     <div class="section">
         <h2>CKCSS Layout</h2>
@@ -422,84 +434,84 @@ HTML file:<br/>
             <h3>1) Justifying Layout:</h3>
             <div class="sc-content">
                 CKCSS Justifying Layout, allow to set any percent value from 1 to 100, it is easy and flexible;
-                <div class="example mts">
-                    <div class="justifies centers" >
-                        <div class="j50 redBg">2Column(j50)</div>
-                        <div class="j50 blueBg">2Column(j50)</div>
+                <div class="example spaceVs">
+                    <div class="justifies centers spaceHs" >
+                        <div class="h50 redBg">2Column(h50)</div>
+                        <div class="h50 blueBg">2Column(h50)</div>
                     </div>
                     <div class="justifies centers" >
-                        <div class="j33 yellowBg">3Column(j33)</div>
-                        <div class="j34 greenBg">3Column(j34)</div>
-                        <div class="j33 yellowBg">3Column(j33)</div>
+                        <div class="h33 yellowBg">3Column(h33)</div>
+                        <div class="h34 greenBg">3Column(h34)</div>
+                        <div class="h33 yellowBg">3Column(h33)</div>
                     </div>
                     <div class="justifies centers" >
-                        <div class="j25 redBg">4Column(j25)</div>
-                        <div class="j25 blueBg">4Column(j25)</div>
-                        <div class="j25 redBg">4Column(j25)</div>
-                        <div class="j25 blueBg">4Column(j25)</div>
+                        <div class="h25 redBg">4Column(h25)</div>
+                        <div class="h25 blueBg">4Column(h25)</div>
+                        <div class="h25 redBg">4Column(h25)</div>
+                        <div class="h25 blueBg">4Column(h25)</div>
                     </div>
                     <div class="justifies centers" >
-                        <div class="j20 yellowBg">5Column(j20)</div>
-                        <div class="j20 greenBg">5Column(j20)</div>
-                        <div class="j20 yellowBg">5Column(j20)</div>
-                        <div class="j20 greenBg">5Column(j20)</div>
-                        <div class="j20 yellowBg">5Column(j20)</div>
+                        <div class="h20 yellowBg">5Column(h20)</div>
+                        <div class="h20 greenBg">5Column(h20)</div>
+                        <div class="h20 yellowBg">5Column(h20)</div>
+                        <div class="h20 greenBg">5Column(h20)</div>
+                        <div class="h20 yellowBg">5Column(h20)</div>
                     </div>
                     <div class="justifies centers" >
-                        <div class="j37 redBg">This is 37%</div>
-                        <div class="j63 blueBg">This is 63%</div>
+                        <div class="h37 redBg">This is 37%</div>
+                        <div class="h63 blueBg">This is 63%</div>
                     </div>
                     <div class="justifies centers middles" >
-                        <div class="j50 blueBg">
-                            <div class="j100 grayBg">This is 100% relative to parent</div>
+                        <div class="h50 blueBg">
+                            <div class="h100 grayBg">This is 100% relative to parent</div>
 
-                            <div class="j100 justifies middles">
-                                <div class="j38 greenBg">This is 38% relative to parent again</div>
-                                <div class="j62 redBg">This is 62% relative to parent again</div>
+                            <div class="h100 justifies middles">
+                                <div class="h38 greenBg">This is 38% relative to parent again</div>
+                                <div class="h62 redBg">This is 62% relative to parent again</div>
                             </div>
                         </div>
-                        <div class="j50 greenBg">This is 50% </div>
+                        <div class="h50 greenBg">This is 50% </div>
                     </div>
                 </div>
 
                 <xmp>
-                    <div class="example mts">
+                    <div class="example spaceVs">
                         <div class="justifies centers" >
-                            <div class="j50 redBg">2Column(j50)</div>
-                            <div class="j50 blueBg">2Column(j50)</div>
+                            <div class="h50 redBg">2Column(h50)</div>
+                            <div class="h50 blueBg">2Column(h50)</div>
                         </div>
                         <div class="justifies centers" >
-                            <div class="j33 yellowBg">3Column(j33)</div>
-                            <div class="j34 greenBg">3Column(j34)</div>
-                            <div class="j33 yellowBg">3Column(j33)</div>
+                            <div class="h33 yellowBg">3Column(h33)</div>
+                            <div class="h34 greenBg">3Column(h34)</div>
+                            <div class="h33 yellowBg">3Column(h33)</div>
                         </div>
                         <div class="justifies centers" >
-                            <div class="j25 redBg">4Column(j25)</div>
-                            <div class="j25 blueBg">4Column(j25)</div>
-                            <div class="j25 redBg">4Column(j25)</div>
-                            <div class="j25 blueBg">4Column(j25)</div>
+                            <div class="h25 redBg">4Column(h25)</div>
+                            <div class="h25 blueBg">4Column(h25)</div>
+                            <div class="h25 redBg">4Column(h25)</div>
+                            <div class="h25 blueBg">4Column(h25)</div>
                         </div>
                         <div class="justifies centers" >
-                            <div class="j20 yellowBg">5Column(j20)</div>
-                            <div class="j20 greenBg">5Column(j20)</div>
-                            <div class="j20 yellowBg">5Column(j20)</div>
-                            <div class="j20 greenBg">5Column(j20)</div>
-                            <div class="j20 yellowBg">5Column(j20)</div>
+                            <div class="h20 yellowBg">5Column(h20)</div>
+                            <div class="h20 greenBg">5Column(h20)</div>
+                            <div class="h20 yellowBg">5Column(h20)</div>
+                            <div class="h20 greenBg">5Column(h20)</div>
+                            <div class="h20 yellowBg">5Column(h20)</div>
                         </div>
                         <div class="justifies centers" >
-                            <div class="j37 redBg">This is 37%</div>
-                            <div class="j63 blueBg">This is 63%</div>
+                            <div class="h37 redBg">This is 37%</div>
+                            <div class="h63 blueBg">This is 63%</div>
                         </div>
                         <div class="justifies centers middles" >
-                            <div class="j50 blueBg">
-                                <div class="j100 grayBg">This is 100% relative to parent</div>
+                            <div class="h50 blueBg">
+                                <div class="h100 grayBg">This is 100% relative to parent</div>
 
-                                <div class="j100 justifies middles">
-                                    <div class="j38 greenBg">This is 38% relative to parent again</div>
-                                    <div class="j62 redBg">This is 62% relative to parent again</div>
+                                <div class="h100 justifies middles">
+                                    <div class="h38 greenBg">This is 38% relative to parent again</div>
+                                    <div class="h62 redBg">This is 62% relative to parent again</div>
                                 </div>
                             </div>
-                            <div class="j50 greenBg">This is 50% </div>
+                            <div class="h50 greenBg">This is 50% </div>
                         </div>
                     </div>
                 </xmp>
@@ -607,23 +619,79 @@ HTML file:<br/>
                     </xmp>
                 </div>
             </div>
+            <h3>4) Justify Layout with space: </h3>
+            <div class="sc-content">
+                <div class="example spaceVs">
+                    <div class="justifies fixedAreaV spaceHs centers middles" >
+                        <div class="h50 v100">
+                            <div class="jf-bg grayBg"></div>
+                            <span>2Column(h50)</span>
+                            <div class="yellowBg">div</div>
+                        </div>
+                        <div class="h50 v100">
+                            <div class="jf-bg grayBg"></div>
+                                <span>2Column(h50)</span>
+                                <div class="blueBg">div</div>
 
+                        </div>
+                    </div>
 
-            <h3>4) Form Layout </h3>
+                    <div class="justifies centers spaceHs" >
+                        <div class="h33">
+                            <div class="yellowBg">3Column(h33)</div>
+                        </div>
+                        <div class="h34">
+                            <div class="greenBg">3Column(h34)</div>
+                        </div>
+                        <div class="h33 ">
+                            <div class="yellowBg">3Column(h33)</div></div>
+                    </div>
+                </div>
+                <xmp>
+                    <div class="example spaceVs">
+                        <div class="justifies fixedAreaV spaceHs" >
+                            <div class="h50 v100 centers middles">
+                                <div class="jf-bg grayBg"></div>
+                                <span>2Column(h50)</span>
+                                <div class="yellowBg">div</div>
+                            </div>
+                            <div class="h50 v100 centers middles">
+                                <div class="jf-bg grayBg"></div>
+                                <span>2Column(h50)</span>
+                                <div class="blueBg">div</div>
+
+                            </div>
+                        </div>
+
+                        <div class="justifies centers spaceHs" >
+                            <div class="h33">
+                                <div class="yellowBg">3Column(h33)</div>
+                            </div>
+                            <div class="h34">
+                                <div class="greenBg">3Column(h34)</div>
+                            </div>
+                            <div class="h33 ">
+                                <div class="yellowBg">3Column(h33)</div></div>
+                        </div>
+                    </div>
+                </xmp>
+            </div>
+
+            <h3>5) Form Layout </h3>
             <div class="sc-content">
                 Form Layout is one of Justify Layout:
                 <div class="justifies grayBg">
-                    <div class="j50 justifies middles">
+                    <div class="h50 justifies middles">
                         <div class="jf-fixed right">
                             Label:
-                        </div><div class="j100">
+                        </div><div class="h100">
                         <input type="text" value="Value"/>
                     </div>
                     </div>
-                    <div class="j50 justifies middles">
+                    <div class="h50 justifies middles">
                         <div class="jf-fixed right">
                             Label:
-                        </div><div class="j100">
+                        </div><div class="h100">
                         <input type="text" value="Value"/>
                     </div>
                     </div>
@@ -631,17 +699,17 @@ HTML file:<br/>
 
                 <xmp>
                     <div class="justifies grayBg">
-                        <div class="j50 justifies middles">
+                        <div class="h50 justifies middles">
                             <div class="jf-fixed right">
                                 Label:
-                            </div><div class="j100">
+                            </div><div class="h100">
                                 <input type="text" value="Value"/>
                             </div>
                             </div>
-                            <div class="j50 justifies middles">
+                            <div class="h50 justifies middles">
                                 <div class="jf-fixed right">
                                     Label:
-                                </div><div class="j100">
+                                </div><div class="h100">
                                 <input type="text" value="Value"/>
                             </div>
                         </div>
@@ -650,13 +718,13 @@ HTML file:<br/>
 
                 You can also use below CSS for Form Layout:
                 <div class="form grayBg">
-                    <div class="fm-group j50">
+                    <div class="fm-group h50">
                         <div class="fm-label">Label:</div>
                         <div class="fm-value">
                             <input type="text" value="Value"/>
                         </div>
                     </div>
-                    <div class="fm-group j50">
+                    <div class="fm-group h50">
                         <div class="fm-label">Label:</div>
                         <div class="fm-value">
                             <input type="text" value="Value"/>
@@ -665,13 +733,13 @@ HTML file:<br/>
                 </div>
                 <xmp>
                     <div class="form grayBg">
-                        <div class="fm-group j50">
+                        <div class="fm-group h50">
                             <div class="fm-label">Label:</div>
                             <div class="fm-value">
                                 <input type="text" value="Value"/>
                             </div>
                         </div>
-                        <div class="fm-group j50">
+                        <div class="fm-group h50">
                             <div class="fm-label">Label:</div>
                             <div class="fm-value">
                                 <input type="text" value="Value"/>
@@ -684,7 +752,7 @@ HTML file:<br/>
         </div>
     </div>
 
-    <div class="section">
+    <!--<div class="section">
         <h2>CKCSS Base Controls:</h2>
         <p>
             CKCSS give some base controls,eg:button,link,popupWindow, you can get more controls from <a href="https://github.com/CheckZhang/ckjs">CKJS</a> :
@@ -695,13 +763,13 @@ HTML file:<br/>
             <span class="button bt_submit">submit button</span>
             <span class="button bt_cancle">cancle button</span>
         </div>
-<xmp>
-    <div>
-        <span class="button">normal button</span>
-        <span class="button bt_submit">submit button</span>
-        <span class="button bt_cancle">cancle button</span>
-    </div>
-</xmp>
+        <xmp>
+            <div>
+                <span class="button">normal button</span>
+                <span class="button bt_submit">submit button</span>
+                <span class="button bt_cancle">cancle button</span>
+            </div>
+        </xmp>
         <h3>2) Text Input </h3>
         <div>
             waitting next version...
@@ -711,7 +779,7 @@ HTML file:<br/>
         <div>
             waitting next version...
         </div>
-    </div>
+    </div>-->
 <script>
     $(".more").click(function(){
         $(".moreContent").toggle();
