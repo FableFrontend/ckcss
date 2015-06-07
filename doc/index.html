@@ -4,9 +4,11 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>CKCSS</title>
+
     <link rel="stylesheet" href="../css/CKCSS.css">
     <link rel="stylesheet" href="doc.css">
     <script src="jquery-1.11.3.min.js"></script>
+    <script src="../js/CKCSS.js"></script>
 </head>
 
 <body>
@@ -342,6 +344,7 @@ HTML file:<br/>
                             <span>top</span>
                             <span class="greenBg">span</span>
                             <div class="redBg">div</div>
+
                         </div>
                     </div><div class="fixedArea centers inlineMiddles yellowBg">
                         <div class="h100 vAuto">
@@ -383,7 +386,7 @@ HTML file:<br/>
             </div>
 
             <div class="sc-content">
-                Vertical align in Justify Layout:<br/>
+                Vertical align in Justify Layout with Fixed Height:<br/>
                 <div class="example fixedAreaV justifies centers spaceHs">
                     <div class="h33 top">
                         <div class="jf-bg blueBg"></div>
@@ -422,7 +425,87 @@ HTML file:<br/>
                         </div>
                     </div>
                 </xmp>
-                Vertical align in one place,eg:middle<br/>
+
+                <table width="100%">
+                    <tr>
+                        <td>
+                            <div class="jf-bg grayBg"></div>
+                            <span>The heightest column</span>
+                            <span class="greenBg">span</span>
+                            <div class="redBg">div</div>
+                            <div class="blueBg">div</div>
+                            <div class="redBg">div</div>
+                            <div class="yellowBg">div</div>
+                        </td>
+                        <td>
+                            <div style="height: 100%;" class="redBg">aaa</div>
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                </table>
+                Vertical align in Justify Layout,with Auto Height:<br/>
+                <div class="example justifies centers spaceHs">
+                    <div class="h25 top">
+                        <div class="jf-bg grayBg"></div>
+                        <span>The heightest column</span>
+                        <span class="greenBg">span</span>
+                        <div class="redBg">div</div>
+                        <div class="blueBg">div</div>
+                        <div class="redBg">div</div>
+                        <div class="yellowBg">div</div>
+                    </div>
+                    <div class="h25 top">
+                        <div class="jf-bg blueBg"></div>
+                        <span>top</span>
+                        <span class="greenBg">span</span>
+                        <div class="redBg">div</div>
+                    </div>
+                    <div class="h25 middle">
+                        <div class="jf-bg yellowBg"></div>
+                        <span>middle</span>
+                        <span class="greenBg">span</span>
+                        <div class="redBg">div</div>
+                    </div><div class="h25 bottom">
+                        <div class="jf-bg grayBg"></div>
+                        <span>bottom</span>
+                        <span class="blueBg">span</span>
+                        <div class="redBg">div</div>
+                    </div>
+                </div>
+                <xmp>
+                    <div class="example justifies centers spaceHs">
+                        <div class="h25 top">
+                            <div class="jf-bg grayBg"></div>
+                            <span>The heightest column</span>
+                            <span class="greenBg">span</span>
+                            <div class="redBg">div</div>
+                            <div class="blueBg">div</div>
+                            <div class="redBg">div</div>
+                            <div class="yellowBg">div</div>
+                        </div>
+                        <div class="h25 top">
+                            <div class="jf-bg blueBg"></div>
+                            <span>top</span>
+                            <span class="greenBg">span</span>
+                            <div class="redBg">div</div>
+                        </div>
+                        <div class="h25 middle">
+                            <div class="jf-bg yellowBg"></div>
+                            <span>middle</span>
+                            <span class="greenBg">span</span>
+                            <div class="redBg">div</div>
+                        </div>
+                        <div class="h25 bottom">
+                            <div class="jf-bg grayBg"></div>
+                            <span>bottom</span>
+                            <span class="blueBg">span</span>
+                            <div class="redBg">div</div>
+                        </div>
+                    </div>
+                </xmp>
+                Set Vertical align all column by one time,eg:middle<br/>
                 <div class="example fixedAreaV justifies centers middles spaceHs">
                     <div class="h33 v100">
                         <div class="jf-bg blueBg"></div>
