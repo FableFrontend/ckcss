@@ -1,9 +1,10 @@
 $(function(){
     // if IE, adjust Justify Layout table-cell height
-    //if(!+[1,]){
     if (!!window.ActiveXObject || "ActiveXObject" in window){
-        $(".justifies").resize(function(e){
-                $(this).children("div").children(".jf-bg").height($(this).height());
+        $(window).resize(function(e){
+            $('.justifies>div>.jf-bg').each(function(i,d){
+                $(d).height($(this).parents(".justifies:first").height());
+            })
          }).resize();
     }
 });
