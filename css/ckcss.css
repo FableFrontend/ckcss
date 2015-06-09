@@ -180,22 +180,21 @@ div{
     border:1px solid #e9e9e9;
     border-radius:5px;
     display:inline-block;
-    background:#f6f6f6 ;
+    background: #c2c2c2;
+    color:white;
 }
 .button:hover{
     border:1px solid #e0e0e0;
-    background:#EFEFEF;
+    background: #ababab;
 }
 .button.bt_submit{
     background:#00a200;
-    color:white;
 }
 .button.bt_submit:hover{
     background:#008000;
 }
 .button.bt_cancle{
     background:#2694be ;
-    color:white;
 }
 .button.bt_cancle:hover{
     background:#267fa9;
