@@ -6,5 +6,9 @@ $(function(){
                 $(d).height($(this).parents(".justifies:first").height());
             })
          }).resize();
+
+        if (/*@cc_on!@*/true) {
+            $("html").addClass( 'ie' + document.documentMode);
+        }
     }
 });
