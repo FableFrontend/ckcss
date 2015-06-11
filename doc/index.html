@@ -191,7 +191,7 @@ HTML file:<br/>
             <h3>1) Horizontal Alignment</h3>
             <div class="sc-content">
                 Horizontal align in a Fixed Area:
-                <div class="example fixedAreas blueBgs inlineMiddles spaceHs">
+                <div class="example fixedAreas blueBgs inlineMiddles mls">
                     <div class="lefts">
                         left:<br/>
                         <span class="yellowBg">span</span>
@@ -207,7 +207,7 @@ HTML file:<br/>
                     </div>
                 </div>
                 <xmp>
-                    <div class="example fixedAreas blueBgs middles spaceHs">
+                    <div class="example fixedAreas blueBgs middles mls">
                         <div class="lefts">
                             left:<br/>
                             <span class="yellowBg">span</span>
@@ -226,7 +226,7 @@ HTML file:<br/>
             </div>
             <div class="sc-content">
                 Horizontal align in Stretching Area:
-                <div class="example blueBgs inlineMiddles spaceHs">
+                <div class="example blueBgs inlineMiddles mls">
                     <div class="lefts v100">
                         left<br/>
                         <span class="yellowBg">span1</span><span class="greenBg">span2</span><span class="blueBg">span3</span><span class="grayBg">...</span>
@@ -245,7 +245,7 @@ HTML file:<br/>
                     </div>
                 </div>
                 <xmp>
-                    <div class="example blueBgs inlineMiddles spaceHs">
+                    <div class="example blueBgs inlineMiddles mls">
                         <div class="lefts v100">
                             left<br/>
                             <span class="yellowBg">span1</span><span class="greenBg">span2</span><span class="blueBg">span3</span><span class="grayBg">...</span>
@@ -269,7 +269,7 @@ HTML file:<br/>
                 <p>
                     Horizontal align in Justify Layout:
                     <div class="example">
-                        <div class="justifies spaceHs middles">
+                        <div class="justifies mls middles">
                             <div class="h33 lefts">
                                 <div class="jf-bg greenBg"></div>
                                 <span>left</span>
@@ -294,7 +294,7 @@ HTML file:<br/>
                     </div>
                     <xmp>
                         <div class="example">
-                            <div class="justifies spaceHs middles">
+                            <div class="justifies mls middles">
                                 <div class="h33 lefts">
                                     <div class="jf-bg greenBg"></div>
                                     <span>left</span>
@@ -323,7 +323,7 @@ HTML file:<br/>
                 <p>
                     Align all children of Justifies,eg:centers
                     <div class="example">
-                        <div class="justifies spaceHs middles centers">
+                        <div class="justifies mls middles centers">
                             <div class="h33">
                                 <div class="jf-bg greenBg"></div>
                                 <span>center</span>
@@ -348,7 +348,7 @@ HTML file:<br/>
                     </div>
                     <xmp>
                         <div class="example">
-                            <div class="justifies spaceHs middles centers">
+                            <div class="justifies mls middles centers">
                                 <div class="h33">
                                     <div class="jf-bg greenBg"></div>
                                     <span>center</span>
@@ -380,7 +380,7 @@ HTML file:<br/>
             <div class="sc-content">
                 <p>
                     Vertical align in Fixed Area:
-                    <div class="example inlineMiddles spaceHs">
+                    <div class="example inlineMiddles mls">
                         <div class="fixedArea centers inlineTops blueBg">
                             <div class="h100">
                                 <span>top</span>
@@ -402,7 +402,7 @@ HTML file:<br/>
                         </div>
                     </div>
                     <xmp>
-                        <div class="example inlineMiddles spaceHs">
+                        <div class="example inlineMiddles mls">
                             <div class="fixedArea centers inlineTops blueBg">
                                 <div class="h100">
                                     <span>top</span>
@@ -430,7 +430,7 @@ HTML file:<br/>
 
                 <p>
                     Vertical align in Stretching Area:
-                    <div class="example inlineMiddles spaceHs">
+                    <div class="example inlineMiddles mls">
                         <div class="centers blueBg">
                             <div class="h100">
                                 <span>middle</span><span class="greenBg">span1</span><span class="greenBg">span2</span><span class="greenBg">...</span>
@@ -455,7 +455,7 @@ HTML file:<br/>
                         </div>
                     </div>
                     <xmp>
-                        <div class="example inlineMiddles spaceHs">
+                        <div class="example inlineMiddles mls">
                             <div class="fixedArea centers inlineTops blueBg">
                                 <div class="h100">
                                     <span>top</span>
@@ -477,11 +477,34 @@ HTML file:<br/>
                             </div>
                         </div>
                     </xmp>
+                    When have a image document element in Stretching Area Or Fixed Area, there is a bug in browsers for alignment,wrap 'img' in 'div' can fix this issue:
+                    <div class="example inlineMiddles mls">
+                        <div class="centers blueBg">
+                            <div class="h100">
+                                <span>middle</span><span class="greenBg">span1</span><span class="greenBg">span2</span><span class="greenBg">...</span>
+                                <div class="redBg">div</div>
+                                <div class="yellowBg">div</div>
+                                <div class="greenBg">...</div>
+                            </div>
+                        </div><div class="centers yellowBg">
+                        <div class="h100">
+                            <div>
+                                <img src="../images/test.jpg"/>
+                            </div>
+                        </div>
+                    </div><div class="centers grayBg">
+                        <div class="h100">
+                            <span>middle</span><span class="blueBg">span</span><span class="greenBg">...</span>
+                            <div class="redBg">div</div>
+                            <div class="greenBg">...</div>
+                        </div>
+                    </div>
+                    </div>
                 </p>
 
                 <p>
                     Vertical align in Justify Layout with Fixed Height:<br/>
-                    <div class="example fixedAreaV justifies centers spaceHs">
+                    <div class="example fixedAreaV justifies centers mls">
                         <div class="h33 top">
                             <div class="jf-bg blueBg"></div>
                             <span>top</span>
@@ -500,7 +523,7 @@ HTML file:<br/>
                         </div>
                     </div>
                     <xmp>
-                        <div class="example fixedAreaV justifies centers spaceHs">
+                        <div class="example fixedAreaV justifies centers mls">
                             <div class="h33 top">
                                 <div class="jf-bg blueBg"></div>
                                 <span>top</span>
@@ -521,10 +544,9 @@ HTML file:<br/>
                     </xmp>
                 </p>
 
-
                 <p>
                     Vertical align in Justify Layout with Stretching Height:<br/>
-                    <div class="example justifies centers spaceHs">
+                    <div class="example justifies centers mls">
                         <div class="h25 top">
                             <div class="jf-bg grayBg"></div>
                             <span>The heightest column</span>
@@ -553,7 +575,7 @@ HTML file:<br/>
                         </div>
                     </div>
                     <xmp>
-                        <div class="example justifies centers spaceHs">
+                        <div class="example justifies centers mls">
                             <div class="h25 top">
                                 <div class="jf-bg grayBg"></div>
                                 <span>The heightest column</span>
@@ -586,7 +608,7 @@ HTML file:<br/>
 
                 <p>
                     Align all children of Justifies,eg:middle<br/>
-                    <div class="example fixedAreaV justifies centers middles spaceHs">
+                    <div class="example fixedAreaV justifies centers middles mls">
                         <div class="h33 v100">
                             <div class="jf-bg blueBg"></div>
                             <span>middles</span>
@@ -605,7 +627,7 @@ HTML file:<br/>
                         </div>
                     </div>
                     <xmp>
-                        <div class="example fixedAreaV justifies centers middles spaceHs">
+                        <div class="example fixedAreaV justifies centers middles mls">
                             <div class="h33 v100">
                                 <div class="jf-bg blueBg"></div>
                                 <span>middles</span>
@@ -637,7 +659,7 @@ HTML file:<br/>
             <h3>1) Justifying Layout:</h3>
             <div class="sc-content">
                 CKCSS Justifying Layout, allow to set any percent value from 1 to 100, it is easy and flexible;
-                <div class="example spaceVs">
+                <div class="example mts">
                     <div class="justifies centers middles" >
                         <div class="h50 redBg">
                             2Column(h50)
@@ -682,7 +704,7 @@ HTML file:<br/>
                 </div>
 
                 <xmp>
-                    <div class="example spaceVs">
+                    <div class="example mts">
                         <div class="justifies centers middles" >
                             <div class="h50 redBg">
                                 2Column(h50)
@@ -729,8 +751,8 @@ HTML file:<br/>
             </div>
             <h3>2) Justify Layout with space: </h3>
             <div class="sc-content">
-                <div class="example spaceVs">
-                    <div class="justifies centers spaceHs middles" >
+                <div class="example mts">
+                    <div class="justifies centers mls middles" >
                         <div class="h50"><div class="jf-bg redBg"></div>
                             <div>
                                 2Column(h50)<span class="greenBg">span</span>
@@ -739,7 +761,7 @@ HTML file:<br/>
                         </div>
                         <div class="h50"><div class="jf-bg blueBg"></div><div>2Column(h50)</div></div>
                     </div>
-                    <div class="justifies centers spaceHs">
+                    <div class="justifies centers mls">
                         <div class="h33">
                             <div class="jf-bg yellowBg"></div>
                             <div>3Column(h33)</div>
@@ -753,7 +775,7 @@ HTML file:<br/>
                             <div>3Column(h33)</div>
                         </div>
                     </div>
-                    <div class="justifies centers spaceHs">
+                    <div class="justifies centers mls">
                         <div class="h25">
                             <div class="jf-bg redBg"></div>
                             <div>4Column(h25)</div>
@@ -771,7 +793,7 @@ HTML file:<br/>
                             <div>4Column(h25)</div>
                         </div>
                     </div>
-                    <div class="justifies centers spaceHs">
+                    <div class="justifies centers mls">
                         <div class="h20">
                             <div class="jf-bg yellowBg"></div>
                             <div>5Column(h20)</div>
@@ -793,7 +815,7 @@ HTML file:<br/>
                             <div>5Column(h20)</div>
                         </div>
                     </div>
-                    <div class="justifies centers spaceHs">
+                    <div class="justifies centers mls">
                         <div class="h37">
                             <div class="jf-bg redBg"></div>
                             <div>This is 37%</div>
@@ -803,14 +825,14 @@ HTML file:<br/>
                             <div>This is 63%</div>
                         </div>
                     </div>
-                    <div class="justifies centers middles spaceHs">
+                    <div class="justifies centers middles mls">
                         <div class="h50">
                             <div class="h100">
                                 <div class="jf-bg grayBg"></div>
                                 <div>This is 100% relative to parent</div>
                             </div>
 
-                            <div class="h100 justifies middles spaceHs">
+                            <div class="h100 justifies middles mls">
                                 <div class="h38">
                                     <div class="jf-bg greenBg"></div>
                                     <div>This is 38% relative to parent again</div>
@@ -828,8 +850,8 @@ HTML file:<br/>
                     </div>
                 </div>
                 <xmp>
-                    <div class="example spaceVs">
-                        <div class="justifies centers spaceHs middles" >
+                    <div class="example mts">
+                        <div class="justifies centers mls middles" >
                             <div class="h50"><div class="jf-bg redBg"></div>
                                 <div>
                                     2Column(h50)<span class="greenBg">span</span>
@@ -838,7 +860,7 @@ HTML file:<br/>
                             </div>
                             <div class="h50"><div class="jf-bg blueBg"></div><div>2Column(h50)</div></div>
                         </div>
-                        <div class="justifies centers spaceHs">
+                        <div class="justifies centers mls">
                             <div class="h33">
                                 <div class="jf-bg yellowBg"></div>
                                 <div>3Column(h33)</div>
@@ -852,7 +874,7 @@ HTML file:<br/>
                                 <div>3Column(h33)</div>
                             </div>
                         </div>
-                        <div class="justifies centers spaceHs">
+                        <div class="justifies centers mls">
                             <div class="h25">
                                 <div class="jf-bg redBg"></div>
                                 <div>4Column(h25)</div>
@@ -870,7 +892,7 @@ HTML file:<br/>
                                 <div>4Column(h25)</div>
                             </div>
                         </div>
-                        <div class="justifies centers spaceHs">
+                        <div class="justifies centers mls">
                             <div class="h20">
                                 <div class="jf-bg yellowBg"></div>
                                 <div>5Column(h20)</div>
@@ -892,7 +914,7 @@ HTML file:<br/>
                                 <div>5Column(h20)</div>
                             </div>
                         </div>
-                        <div class="justifies centers spaceHs">
+                        <div class="justifies centers mls">
                             <div class="h37">
                                 <div class="jf-bg redBg"></div>
                                 <div>This is 37%</div>
@@ -902,14 +924,14 @@ HTML file:<br/>
                                 <div>This is 63%</div>
                             </div>
                         </div>
-                        <div class="justifies centers middles spaceHs">
+                        <div class="justifies centers middles mls">
                             <div class="h50">
                                 <div class="h100">
                                     <div class="jf-bg grayBg"></div>
                                     <div>This is 100% relative to parent</div>
                                 </div>
 
-                                <div class="h100 justifies middles spaceHs">
+                                <div class="h100 justifies middles mls">
                                     <div class="h38">
                                         <div class="jf-bg greenBg"></div>
                                         <div>This is 38% relative to parent again</div>
@@ -1031,7 +1053,7 @@ HTML file:<br/>
                     </p>
                     <p>
                         Fixed Column with space:
-                        <div class="example justifies fixedAreaV middles centers spaceHs">
+                        <div class="example justifies fixedAreaV middles centers mls">
                             <div class="jf-fixed">
                                 <div class="jf-bg redBg"></div>
                                 <div>150px(jf-fixed)</div>

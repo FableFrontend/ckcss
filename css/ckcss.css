@@ -70,6 +70,13 @@ div{
     box-sizing:border-box;
 }
 /** reset end **/
+.ckCss div,.ckCss input,.ckCss textarea{
+    box-sizing:border-box;
+}
+.ckCss input,.ckCss textarea{
+    padding:5px;
+    border:none;
+}
 
 /** alignment **/
 .left,.lefts{
@@ -82,13 +89,13 @@ div{
     text-align: center;
 }
 
-.top,.tops>div{
+.justifies>div.top,.justifies.tops>div{
     vertical-align: top;
 }
-.middle,.middles>div{
+.justifies>div.middle,.justifies.middles>div{
     vertical-align: middle;
 }
-.bottom,.bottoms>div{
+.justifies>div.bottom,.justifies.bottoms>div{
     vertical-align: bottom;
 }
 
@@ -110,18 +117,22 @@ div{
 .ie11 .inlineMiddles:before,.ie11 .inlineTops:before,.ie11 .inlineBottoms:before{
     margin-left: -4px;
 }
-/** Safari **/
+
 @media all and (-webkit-min-device-pixel-ratio:0){
-    .inlineMiddles:before,.inlineTops:before,.inlineBottoms:before{
-        margin-left: -4px;
-    }
-}
-/** Opera **/
-@media screen and (min-width:0px){
     .inlineMiddles:before,.inlineTops:before,.inlineBottoms:before{
         margin-left: -8px;
     }
 }
+
+/*@media all and (-webkit-min-device-pixel-ratio:10000),
+not all and (-webkit-min-device-pixel-ratio:0){
+    .inlineMiddles:before,.inlineTops:before,.inlineBottoms:before{
+        margin-left: -8px;
+    }
+}*/
+
+
+
 
 .inlineMiddles:before,.inlineMiddles>div{
     vertical-align: middle;
@@ -146,6 +157,7 @@ div{
     display: table-cell;
     position:relative;
     height: 100%;
+    vertical-align: middle;
 }
 .justifies>div>span,.justifies>div>div{
     position:relative;
@@ -165,10 +177,10 @@ div{
     left: 0;
 }
 /** floats **/
-.float.fl_left,.floats.fl_left>div{
+.floatLeft,.floats.fl_left>div{
     float:left;
 }
-.float.fl_right,.floats.fl_right>div{
+.floatRight,.floats.fl_right>div{
     float:right;
 }
 /** form layout **/
@@ -237,51 +249,72 @@ div{
 }
 
 /** margin **/
-.spaceHs{
+.mls{
     margin-left: -4px;
     margin-right: -4px;
 }
-.spaceHs>div{
+.mls>div{
     margin-left: 4px;
     margin-right: 4px;
 }
 
-.justifies.spaceHs{
+.justifies.mls{
     margin-left: 0;
     margin-right: 0;
 }
-.justifies.spaceHs>div:first-child{
+.justifies.mls>div:first-child{
     padding-left: 0;
 }
-.justifies.spaceHs>div{
+.justifies.mls>div{
     margin-left: 0;
     padding-left: 3px;
     padding-right: 2px;
 }
-.justifies.spaceHs>div>.jf-bg{
+.justifies.mls>div>.jf-bg{
     left: 3px;
     right:2px;
 }
-.justifies.spaceHs>div:first-child>.jf-bg{
+.justifies.mls>div:first-child>.jf-bg{
     left:0;
 }
-.justifies.spaceHs>div:last-child>.jf-bg{
+.justifies.mls>div:last-child>.jf-bg{
     right:0;
 }
-.justifies.spaceHs>div:last-child{
+.justifies.mls>div:last-child{
     padding-right: 0;
 }
-.spaceVs{
+.mts{
     margin-top:-10px;
-    margin-bottom: -10px;
 }
-.spaceVs:first-child{
+.mts:first-child{
     margin-top:0;
 }
-.spaceVs>div{
-    margin-top:5px;
+.mts>div{
+    margin-top:10px;
 }
+.mt{margin-top: 10px}.mtLg{margin-top:20px}.mtSm{margin-top: 5px}.mtSuLg{margin-top:30px}.ml{margin-left:10px}.mlLg{margin-left: 20px;}.mlSm{margin-left: 5px}.mlSuLg{margin-left:30px;}.pd{padding:10px}.pdLg{padding: 20px}.pdSuLg{padding:30px}.pdSm{padding:5px}
+/** margin end **/
 
 
-
+.popupWin{
+    position:absolute;
+    bottom:0;
+    top:0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+.popupWin>.pw-win{
+    width:600px;
+    min-height: 200px;
+    background: #30a1e6;
+}
+.popupWin .pw-close{
+    background: #efd457;
+    cursor:pointer;
+    width:20px;
+    height: 20px;
+    float:right;
+}
 
