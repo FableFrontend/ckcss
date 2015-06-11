@@ -66,16 +66,25 @@ th {
     padding: 0;
 }
 
-div{
+div,input.textInput,textarea{
     box-sizing:border-box;
 }
+
+input.textInput,textarea{
+    padding:5px;
+    border:none;
+    border:1px solid #e8e2e2;
+    border-radius: 5px;
+}
 /** reset end **/
-.ckCss div,.ckCss input,.ckCss textarea{
+
+
+.ckCss div,.ckCss .textInput,.ckCss textarea{
     box-sizing:border-box;
 }
 .ckCss input,.ckCss textarea{
     padding:5px;
-    border:none;
+    border:1px solid #e8e2e2;
 }
 
 /** alignment **/
