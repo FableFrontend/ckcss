@@ -1,22 +1,4 @@
-/** reset **/
-html,body{-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;margin:0;padding:10px;background:#EFEFEF;}
-a {background-color: transparent;}
-a:active,a:hover {outline: 0;}
-img {border: 0;}
-button,input,optgroup,select,textarea {color: inherit; font: inherit; margin: 0; }
-button,html input[type="button"], input[type="reset"],input[type="submit"] {-webkit-appearance: button; cursor: pointer; }
-button[disabled],html input[disabled] {cursor: default;}
-button::-moz-focus-inner,input::-moz-focus-inner {border: 0;padding: 0;}
-input {line-height: normal;}
-input[type="checkbox"],input[type="radio"] {box-sizing: border-box; padding: 0; }
-input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {height: auto;}
-textarea {overflow: auto;}
-table {border-collapse: collapse;border-spacing: 0;}
-td,th {padding: 0;}
-div,input.textInput,textarea{box-sizing:border-box;}
-input.textInput,textarea{padding:5px;border:none;border:1px solid #e8e2e2;border-radius: 5px;}
-/** reset end **/
-.ckCss div,.ckCss .textInput,.ckCss textarea{box-sizing:border-box;}
+﻿.ckCss div,.ckCss .textInput,.ckCss textarea{box-sizing:border-box;}
 .ckCss input,.ckCss textarea{padding:5px;border:1px solid #e8e2e2;}
 /** alignment **/
 .left,.lefts{text-align: left;}
@@ -29,13 +11,11 @@ input.textInput,textarea{padding:5px;border:none;border:1px solid #e8e2e2;border
 .inlineMiddles:before,.inlineTops:before,.inlineBottoms:before{height:100%;display: inline-block;content:"&nbsp";width:0px;overflow: hidden;margin-left: -8px;margin-left /*\**/
 :-4px\9;zoom: 1;background: none;}
 .ie11 .inlineMiddles:before,.ie11 .inlineTops:before,.ie11 .inlineBottoms:before{margin-left: -4px;}
-@media all and (-webkit-min-device-pixel-ratio:0){.inlineMiddles:before,.inlineTops:before,.inlineBottoms:before{margin-left: -8px;}
-}
+@media all and (-webkit-min-device-pixel-ratio:0){.inlineMiddles:before,.inlineTops:before,.inlineBottoms:before{margin-left: -8px;}}
 .inlineMiddles:before,.inlineMiddles>div{vertical-align: middle;}
 .inlineTops:before,.inlineTops>div{vertical-align: top;}
 .inlineBottoms:before,.inlineBottoms>div{vertical-align: bottom;}
-@-moz-document url-prefix(){.inlineMiddles:before,.inlineTops:before,.inlineBottoms:before{height: 0;}
-}
+@-moz-document url-prefix(){.inlineMiddles:before,.inlineTops:before,.inlineBottoms:before{height: 0;}}
 /** percent layout **/
 .justifies{width:100%;display: table;}
 .justifies>div{display: table-cell;position:relative;height: 100%;vertical-align: middle;}
@@ -75,4 +55,3 @@ input.textInput,textarea{padding:5px;border:none;border:1px solid #e8e2e2;border
 .popupWin>.pw-win{width:600px;min-height: 200px;background: #30a1e6;}
 .popupWin>.pw-win>div{text-align: left}
 .popupWin .pw-close{background: #efd457;cursor:pointer;width:20px;height: 20px;float:right;}
-
